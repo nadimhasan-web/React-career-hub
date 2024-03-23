@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -12,6 +11,7 @@ import Statistics from './Components/Statistics/Statistics.jsx';
 import Jobs from './Components/Jobs/Jobs.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
 import Errorpage from './Components/ErrorPage/Errorpage.jsx';
+import JobDetails from './Components/JobDetails/JobDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +34,11 @@ const router = createBrowserRouter([
       {
         path:'/blogs',
         element:<Blogs></Blogs>
+      },
+      {
+        path:'/job/:id',
+        element:<JobDetails></JobDetails>,
+        loader:()=> fetch('../jobs.json')
       }
     ]
   },
