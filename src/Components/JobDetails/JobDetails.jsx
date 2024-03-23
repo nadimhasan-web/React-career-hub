@@ -56,9 +56,11 @@ const JobDetails = () => {
               </p>
               <p className="flex items-center font-bold text-lg text-[#474747]">
                 <FaRegCalendarAlt className="text-[#7E90FE] mr-1"></FaRegCalendarAlt>
+                <span>
                 Job Title:
                 <span className="font-medium text-[#757575] ml-1">
                   {job.job_title}
+                </span>
                 </span>
               </p>
             </div>
@@ -80,13 +82,13 @@ const JobDetails = () => {
                   {job.contact_information.email}
                 </span>
               </p>
-              <p className="flex font-bold text-lg text-[#474747]">
-                <MdOutlineLocationOn className="text-[#7E90FE] mr-1 font-bold"></MdOutlineLocationOn>
+              <p className="flex items-center font-bold text-lg text-[#474747]">
+                <MdOutlineLocationOn className="text-[#7E90FE] mr-1"></MdOutlineLocationOn>
                 <span>
-                  Address:
-                  <span className="font-medium text-[#757575] ml-1">
-                    {job.contact_information.address}
-                  </span>
+                Address:
+                <span className="font-medium text-[#757575] ml-1">
+                  {job.contact_information.address}
+                </span>
                 </span>
               </p>
             </div>

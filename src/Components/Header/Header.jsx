@@ -36,13 +36,13 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="font-extrabold text-2xl text-[#1A1919] manrope">Career Hub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <button className="font-extrabold text-lg text-white bg-gradient-to-r from-[#7E90FE] to-[#9774FF] px-5 py-2 rounded-lg">Apply Now</button>
       </div>
     </div>
   );

@@ -41,7 +41,7 @@ const JobCard = ({ job }) => {
         </h2>
       </div>
       <Link to={`/job/${id}`}>
-        <button className="font-extrabold text-lg manrope text-white bg-gradient-to-r from-[#7E90FE] to-[#9774FF] px-4 py-2 rounded-lg">
+        <button className="font-extrabold text-lg manrope text-white bg-gradient-to-r from-[#7E90FE] to-[#9774FF] px-4 py-2 rounded-lg mt-4">
           View Details
         </button>
       </Link>
