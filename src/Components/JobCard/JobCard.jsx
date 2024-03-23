@@ -1,6 +1,7 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDollar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+// import PropTypes from 'prop-types';
 
 const JobCard = ({ job }) => {
   const {

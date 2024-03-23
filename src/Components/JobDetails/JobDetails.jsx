@@ -4,13 +4,21 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// import { saveJobApplication } from "../../utility/LocalStorage";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
   const job = jobs.find((job) => job.id === idInt);
-  console.log(job);
+
+  const handleApplyNow = () => {
+    
+    // saveJobApplication(idInt);
+    toast('You have applied successfully')
+  };
   return (
     <div>
       <div className="grid md:grid-cols-3 gap-4 my-20">
@@ -57,10 +65,10 @@ const JobDetails = () => {
               <p className="flex items-center font-bold text-lg text-[#474747]">
                 <FaRegCalendarAlt className="text-[#7E90FE] mr-1"></FaRegCalendarAlt>
                 <span>
-                Job Title:
-                <span className="font-medium text-[#757575] ml-1">
-                  {job.job_title}
-                </span>
+                  Job Title:
+                  <span className="font-medium text-[#757575] ml-1">
+                    {job.job_title}
+                  </span>
                 </span>
               </p>
             </div>
@@ -85,16 +93,22 @@ const JobDetails = () => {
               <p className="flex items-center font-bold text-lg text-[#474747]">
                 <MdOutlineLocationOn className="text-[#7E90FE] mr-1"></MdOutlineLocationOn>
                 <span>
-                Address:
-                <span className="font-medium text-[#757575] ml-1">
-                  {job.contact_information.address}
-                </span>
+                  Address:
+                  <span className="font-medium text-[#757575] ml-1">
+                    {job.contact_information.address}
+                  </span>
                 </span>
               </p>
             </div>
           </div>
-          <button className="font-extrabold text-lg manrope text-white bg-gradient-to-r from-[#7E90FE] to-[#9774FF] w-full py-4 mt-4 rounded-lg">Apply Now</button>
+          <button
+            onClick={handleApplyNow}
+            className="font-extrabold text-lg manrope text-white bg-gradient-to-r from-[#7E90FE] to-[#9774FF] w-full py-4 mt-4 rounded-lg"
+          >
+            Apply Now
+          </button>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );
